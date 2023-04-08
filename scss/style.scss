@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Quicksand:wght@400;500;600;700&family=Sedgwick+Ave+Display&display=swap');
+
+$primary-color: rgb(16, 172, 161);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: $primary-color;
+    color: white;
+}
+
+::-moz-selection{
+    background-color: $primary-color;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.action{
+    background-color: $primary-color;
+    color: white;
+    border: 2px solid $primary-color;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 1.1rem;
+    border-radius: .2rem;
+    transition: .4s;
+
+    &:hover{
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+// HEADER
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.1rem;
+
+    .logo{
+        img{
+            width: 80px;
+        }
+    }
+
+    .navbar{
+        ul{
+            display: flex;
+            
+        }
+    }
+}
+
+// SHOWCASE
+.showcase{
+    background: url('/images/foto-frente-izq.JPG ') no-repeat center center/cover;
+    height: 650px;
+
+    .overlay{
+        background-color: rgba(0, 0, 0, .4);
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: capitalize;
+
+            span{
+               font-family: 'Sedgwick Ave Display', cursive; 
+               font-size: 3.5rem;
+               color: lighten($color: $primary-color, $amount: 10);
+               display: inline-block;
+               padding-bottom: 2.3rem;
+            }
+        }
+    }
+}
