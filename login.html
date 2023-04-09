@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Esto es Fruta Store">
+    <meta name="keywords" content=" fruta, frutastore, moda, fashion, estilo">
+    <meta name="theme-color" content="rgb(16, 172, 161)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./scss/style.min.css">
+    <title>FrutaStore</title>
+</head>
+<body>
+    <button class="btn-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <header id="header" class="header">
+        <div class="logo">
+            <a href="index.html"><img src="./images/logoModificado.png" alt="logo"></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a class="action" href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login">
+        <div class="overlay-login">
+            <form class="form-control">
+                <input type="text" placeholder="username" required>
+                <input type="email" placeholder="Enter your email" required>
+                <button class="action">Log In</button>
+                <small>Don´t have an acount? <a href="./login.html">Log In</a></small>
+            </form>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

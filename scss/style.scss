@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Quicksand:wght@400;500;600;700&family=Sedgwick+Ave+Display&display=swap');
-
+@import 'login';
 $primary-color: rgb(16, 172, 161);
 
 
@@ -8,7 +8,7 @@ $primary-color: rgb(16, 172, 161);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 ::selection{
@@ -50,6 +50,29 @@ a{
     }
 }
 
+.btn-top{
+    opacity: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 5px;
+    background-color: $primary-color;
+    color: white;
+    border: 2px solid $primary-color;
+    border-radius: 4px;
+    transition: .4s;
+
+    &.show{
+        opacity: 1;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: transparent;
+        color: $primary-color;
+    }
+}
+
 body{
     font-family: 'Quicksand', sans-serif;
 }
@@ -62,11 +85,12 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.1rem;
+    transition: .4s;
 
     .logo{
         img{
-            width: 150px;
-            background-color: $primary-color;
+            width: 100px;
+            //background-color: $primary-color;
             border-radius: .2rem;
         }
     }
@@ -104,16 +128,16 @@ body{
 
         h1{
             color: white;
-            font-size: 3rem;
+            font-size: 3.5rem;
             text-align: center;
             text-transform: capitalize;
 
             span{
                font-family: 'Sedgwick Ave Display', cursive; 
-               font-size: 3.5rem;
+               font-size: 4rem;
                color: lighten($color: $primary-color, $amount: 10);
-               display: inline-block;
-               padding-bottom: 2.3rem;
+               display: block;
+               padding-bottom: 1.3px;
             }
         }
     }
@@ -147,13 +171,14 @@ body{
 .footer{
     display: flex;
     //align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px 20px 100px;
     background-color: lighten($color: $primary-color, $amount: 40);
 
     .footer-logo{
         img{
-            width: 130px;
+            width: 100px;
         }
 
         .social{
@@ -210,3 +235,53 @@ body{
         }
     }
 }
+
+//MEDIA QUERIES
+ @media (min-width: 300px) and (max-width: 600px) {
+
+    .showcase{
+       .overlay{
+        h1{
+            font-size: 2.5rem;
+
+            span{
+                font-size: 2.5rem;
+            }
+        }
+       }
+    }
+    .gallery{
+        h3{
+            font-size: 1.8rem;
+        }
+        .card-grid{
+            grid-template-columns: 1fr;
+
+            & > div:nth-child(even) {
+                display: none;
+            }
+        }
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .footer-logo{
+            img{
+                display: block;
+                margin: auto;
+            }
+            .social{
+                margin-bottom: 20px;
+            }
+        }
+
+        .form{
+            input,
+            button {
+                width: 200px;
+            }
+        }
+    }
+ }

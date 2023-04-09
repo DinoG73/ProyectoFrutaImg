@@ -1,0 +1,18 @@
+.login{
+    background: url('/images/foto-frente-izq.JPG') no-repeat center center/cover;
+    height: 100vh;
+
+    .overlay-login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        .form-control{
+            display: flex;
+            flex-direction: column;
+            background-color: #f1f1f1;
+            padding: 4.5rem;
+        }
+    }
+}
