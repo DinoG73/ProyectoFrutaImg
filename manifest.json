@@ -1,0 +1,21 @@
+{
+    "short name": "Greater",
+    "name": "Greater Image Gallery",
+    "id": "/",
+    "icons": [
+        {
+            "src": "./images/logo-food-logo-flower192x192.png",
+            "size": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/logo-food-logo-flower512x512.png",
+            "size": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "rgb(16, 172, 161)",
+    "background_color": "#f1f1f1"
+}
